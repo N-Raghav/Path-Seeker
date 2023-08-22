@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <!-- Arguments -->
+  <arg name="move_forward_only" default="true"/>
+
+  <!-- Map server for Map-based Navigation-->
+ 
+	 <node pkg="map_server" name="map_server" type="map_server" args="$(find rmp01_bot_description)/maps/map001.yaml"/>
+
+
+  <include file="$(find rmp01_bot_description)/launch/amcl.launch"/>
+  <!-- rviz -->
+  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find rmp01_bot_description)/launch/urdf.rviz"/>
+
+
+  <!-- move_base -->
+  <include file="$(find rmp01_bot_description)/launch/move_base.launch">
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include>
+
+</launch>
