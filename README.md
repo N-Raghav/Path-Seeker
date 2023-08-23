@@ -1,6 +1,6 @@
 # Autonomous Robot Navigation Project
 
-![Robot Image](https://drive.google.com/file/d/1hTw4ZWZPg9QlCM_GuyqbTyvObldWn1Qe/view?usp=drive_link)
+![Robot Image](amcl.png)
 
 ## Project Overview
 
