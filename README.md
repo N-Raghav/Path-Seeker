@@ -1,4 +1,4 @@
-# Autonomous Robot Navigation Project
+# Path Seeker
 
 ![Robot Image](amcl.png)
 
